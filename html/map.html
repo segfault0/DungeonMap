@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css"></style>
+        <link rel="stylesheet" type="text/css" href="../css/map.css"></style>
+        <script src="../js/jquery-3.2.0.min.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/dragscroll.js"></script>
+        <script src="../js/map.js"></script>
+        <script src="../js/layeredCanvas.js"></script>
+        
+
+        <script>
+            $(function() {
+                setupMap();
+                //$("#gridCanvas").draggable({ containment: 'parent'});
+                // setupDragScroll();
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="canvasDiv" class="map-container" tabindex="1">
+            <canvas id="mapCanvas" width="500" height="500">No canvas support</canvas>
+        </div>
+    </body>
+</html>

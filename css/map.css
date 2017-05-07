@@ -1,0 +1,11 @@
+.map-container {
+/*	width: 600px;
+	height: 600px;*
+	overflow: scroll;*/
+	border: 1px solid;
+	/*padding: 25px;*/
+}
+
+.gridCanvas {
+	/*padding: 25px;*/
+}
