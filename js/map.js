@@ -36,32 +36,8 @@ function setupMap() {
         sizeY: 32,
         playerX: 10,
         playerY: 10,
-        playerVision: 50
+        playerVision: 100
     };
-
-
-
-    // var mapLayers = new layeredCanvas("mapCanvas");
-
-    // mapLayers.addLayer( { id: 'gridLayer', show: true, render: function(canvas, ctx) {
-    //             drawGridLayer(canvas, mapObject);
-    //         }
-    //     }
-    // );
-
-    // mapLayers.addLayer( { id: 'playerLayer', show: true, render: function(canvas, ctx) {
-    //             drawPlayerLayer(canvas, mapObject);
-    //         }
-    //     }
-    // );
-    
-    // mapLayers.addLayer( { id: 'fogLayer', show: true, render: function(canvas, ctx) {
-    //             drawFogLayer(canvas, mapObject);
-    //         }
-    //     }
-    // );
-
-    // mapObject['mapLayers'] = mapLayers;
 
     var cnv = document.getElementById("mapCanvas");
 
@@ -100,9 +76,10 @@ function setupMap() {
 
 
 function drawMap(cnv, mapObject) {
-    drawGridLayer(cnv, mapObject);
+    cnv.getContext('2d').clearRect(0, 0, cnv.width, cnv.height);
     drawFogLayer(cnv, mapObject);
     drawPlayerLayer(cnv, mapObject);
+    drawGridLayer(cnv, mapObject);
 }
 
 function drawFogLayer(cnv, mapObject) {
@@ -142,7 +119,6 @@ function drawGridLayer(cnv, mapObject) {
     var iHeight = cnv.height;
 
     var ctx = cnv.getContext('2d');
-    ctx.clearRect(0, 0, cnv.width, cnv.height);
 
     ctx.strokeStyle = mapObject.color;
     ctx.lineWidth = mapObject.lineWidth;
