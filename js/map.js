@@ -85,7 +85,7 @@ function drawMap(cnv, mapObject) {
 function drawFogLayer(cnv, mapObject) {
     var ctx = cnv.getContext('2d');
     ctx.beginPath();
-    ctx.rect(mapObject.padding, mapObject.padding, cnv.width - mapObject.padding, cnv.height - mapObject.padding);
+    ctx.rect(mapObject.padding, mapObject.padding, cnv.width - mapObject.padding * 2, cnv.height - mapObject.padding * 2);
     ctx.fillStyle = "rgba(0,0,0,.9)";
     ctx.fill();
     ctx.closePath();
